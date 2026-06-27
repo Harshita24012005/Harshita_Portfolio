@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harshita | Portfolio</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+
+body {
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  scroll-behavior: smooth;
+}
+
+.glass {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.typing::after {
+  content: "|";
+  animation: blink 0.7s infinite;
+}
+
+section {
+  scroll-margin-top: 90px;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.skill-bar {
+  height: 8px;
+  background: #1f2937;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #22c55e);
+  width: 0;
+  transition: 1.5s ease;
+}
+</style>
+<script>
+  tailwind.config = {
+    darkMode: 'class'
+  }
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-black dark:bg-gray-950 dark:text-white">
+
+<!-- FLOAT BUTTON -->
+<a href="#contact"
+   class="fixed bottom-6 right-6 bg-blue-600 px-5 py-3 rounded-full shadow-lg hover:scale-110 transition">
+   Hire Me
+</a>
+
+<!-- NAV -->
+<header class="fixed w-full glass flex justify-between items-center px-8 py-4 z-50">
+
+  <h1 class="font-bold text-xl">Harshita</h1>
+
+  <nav class="space-x-6 text-gray-300">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#cert">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+</header>
+   
+
+<!-- HERO -->
+<section id="home" class="min-h-screen flex items-center justify-center px-6">
+
+  <div class="text-center max-w-3xl">
+
+    <!-- Profile Image -->
+    <div class="flex justify-center">
+      <img src="assets/images/profile.jpg"
+           class="w-40 h-40 rounded-full border-4 border-blue-500 shadow-xl hover:scale-105 transition"/>
+    </div>
+
+    <!-- Name -->
+    <h1 class="text-5xl font-bold mt-6">
+      Hi, I'm <span class="text-blue-400">Harshita Sohner</span>
+    </h1>
+
+    <!-- Role -->
+    <p class="text-xl text-gray-300 mt-3">
+      MCA Student
+    </p>
+
+    <!-- Typing Effect -->
+    <p id="typing" class="text-gray-400 mt-2 text-lg"></p>
+
+    <!-- Short Intro -->
+    <p class="text-gray-400 mt-6 leading-7">
+      Passionate about building scalable backend systems using Java, Spring Boot,
+      and REST APIs. Focused on problem solving, clean architecture, and real-world applications.
+    </p>
+
+    <!-- Buttons -->
+    <div class="mt-8 flex flex-wrap justify-center gap-4">
+
+      <a href="assets/resume/Harshita_Sohner_Resume.pdf"
+         target="_blank"
+         class="bg-blue-600 px-6 py-3 rounded-xl hover:scale-105 transition shadow-lg">
+         📄 View Resume
+      </a>
+
+      <a href="assets/resume/Harshita_Sohner_Resume.pdf"
+         download
+         class="bg-green-600 px-6 py-3 rounded-xl hover:scale-105 transition shadow-lg">
+         ⬇ Download Resume
+      </a>
+
+      <a href="#contact"
+         class="bg-gray-800 px-6 py-3 rounded-xl hover:scale-105 transition shadow-lg">
+         📬 Contact Me
+      </a>
+
+    </div>
+
+    <!-- Social Links -->
+    <div class="mt-6 text-gray-400 space-x-4">
+
+      <a href="https://github.com/" target="_blank" class="hover:text-white">
+        GitHub
+      </a>
+
+      <a href="https://linkedin.com/" target="_blank" class="hover:text-white">
+        LinkedIn
+      </a>
+
+      <span>📍 Indore, India</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-20 max-w-5xl mx-auto px-6">
+  <h2 class="text-3xl font-bold mb-6">About Me</h2>
+
+  <div class="text-gray-300 leading-7 space-y-4">
+
+    <p>
+      I am <span class="text-white font-semibold">Harshita Sohner</span>, an Integrated MCA student at
+      International Institute of Professional Studies (IIPS), DAVV Indore, currently in my 4th year
+      with graduation expected in 2028.
+    </p>
+
+    <p>
+      I am passionate about <span class="text-white font-semibold">Java Backend Development</span> and
+      enjoy building scalable and efficient applications using technologies like Spring Boot, JDBC,
+      Servlets, and REST APIs. I am also strengthening my problem-solving skills through Data Structures
+      and Algorithms in Java.
+    </p>
+
+    <p>
+      I have hands-on experience in developing academic and personal projects such as a
+      <span class="text-white font-semibold">Rural Service Finder web application</span> and a
+      <span class="text-white font-semibold">Weather Forecasting application</span> using Python and APIs.
+      These projects helped me understand real-world application development, backend logic, and API integration.
+    </p>
+
+    <p>
+      I am continuously learning modern backend technologies including Spring Boot, MySQL, and exploring
+      DevOps tools like Docker and Kubernetes to enhance my development skills and become a complete
+      backend engineer.
+    </p>
+
+    <p>
+      My goal is to secure a role as a <span class="text-white font-semibold">Java Backend Developer</span>
+      where I can contribute to impactful projects, improve my technical expertise, and grow in a
+      professional engineering environment.
+    </p>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="py-20 max-w-5xl mx-auto px-6">
+
+  <h2 class="text-3xl font-bold mb-8">Skills</h2>
+
+  <div class="grid md:grid-cols-2 gap-6 text-gray-300">
+
+    <!-- Programming Languages -->
+    <div class="bg-gray-900 p-6 rounded-xl">
+      <h3 class="text-xl font-semibold text-white mb-3">Programming Languages</h3>
+      <ul class="space-y-2">
+        <li>Core Java</li>
+        <li>Advanced Java</li>
+        <li>Python</li>
+      </ul>
+    </div>
+
+    <!-- Backend Development -->
+    <div class="bg-gray-900 p-6 rounded-xl">
+      <h3 class="text-xl font-semibold text-white mb-3">Backend Development</h3>
+      <ul class="space-y-2">
+        <li>Spring Boot</li>
+        <li>Spring MVC</li>
+        <li>REST APIs</li>
+        <li>OpenAPI / Swagger</li>
+      </ul>
+    </div>
+
+    <!-- Frontend -->
+    <div class="bg-gray-900 p-6 rounded-xl">
+      <h3 class="text-xl font-semibold text-white mb-3">Frontend Development</h3>
+      <ul class="space-y-2">
+        <li>HTML</li>
+        <li>Tailwind CSS</li>
+        <li>Bootstrap</li>
+        <li>JavaScript</li>
+      </ul>
+    </div>
+
+    <!-- Databases -->
+    <div class="bg-gray-900 p-6 rounded-xl">
+      <h3 class="text-xl font-semibold text-white mb-3">Databases</h3>
+      <ul class="space-y-2">
+        <li>MySQL (Basic to Intermediate)</li>
+        <li>PostgreSQL (Basic)</li>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Tools & Platforms -->
+    <div class="bg-gray-900 p-6 rounded-xl">
+      <h3 class="text-xl font-semibold text-white mb-3">Tools & Platforms</h3>
+      <ul class="space-y-2">
+        <li>Git & GitHub</li>
+        <li>Postman (API Testing)</li>
+        <li>Netlify (Deployment)</li>
+      </ul>
+    </div>
+
+    <!-- IDEs -->
+    <div class="bg-gray-900 p-6 rounded-xl">
+      <h3 class="text-xl font-semibold text-white mb-3">IDEs / Editors</h3>
+      <ul class="space-y-2">
+        <li>Eclipse</li>
+        <li>IntelliJ IDEA</li>
+        <li>VS Code</li>
+        <li>Android Studio</li>
+      </ul>
+    </div>
+
+    <!-- Cloud / DevOps -->
+    <div class="bg-gray-900 p-6 rounded-xl md:col-span-2">
+      <h3 class="text-xl font-semibold text-white mb-3">Cloud & DevOps (Learning)</h3>
+      <ul class="space-y-2">
+        <li>AWS (Basic Knowledge)</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-20 max-w-5xl mx-auto px-6 fade">
+
+<h2 class="text-3xl font-bold mb-6">Projects</h2>
+
+<div class="grid md:grid-cols-2 gap-6">
+
+<div class="glass p-6 rounded-2xl hover:scale-105 transition">
+<h3 class="text-xl font-semibold">Rural Service Finder</h3>
+<p class="text-gray-300 mt-2">
+Connects rural users with electricians, plumbers & carpenters.
+</p>
+<p class="text-gray-400 mt-2">Java | JSP | Servlets | MySQL</p>
+</div>
+
+<div class="glass p-6 rounded-2xl hover:scale-105 transition">
+<h3 class="text-xl font-semibold">Weather App</h3>
+<p class="text-gray-300 mt-2">
+Real-time weather data using OpenWeather API.
+</p>
+<p class="text-gray-400 mt-2">Python | API</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CERT -->
+<section id="cert" class="py-20 max-w-5xl mx-auto px-6 fade">
+
+<h2 class="text-3xl font-bold mb-6">Certification</h2>
+
+<div class="glass p-6 rounded-2xl">
+<h3 class="text-xl font-semibold">
+Goldman Sachs – Internal Audit Simulation
+</h3>
+
+<p class="text-gray-300 mt-2">
+Forage Virtual Experience Program
+</p>
+
+<a href="assets/images/certificate.pdf"
+   target="_blank"
+   class="text-blue-400 mt-4 inline-block hover:underline">
+   View Certificate
+</a>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-20 max-w-5xl mx-auto px-6 fade">
+
+<h2 class="text-3xl font-bold mb-6">Contact</h2>
+
+<div class="glass p-6 rounded-2xl space-y-2">
+<p>Email: <span class="text-blue-400">harshitasohner@gmail.com</span></p>
+<p>GitHub: Harshita24012005</p>
+<p>Location: Indore, MP</p>
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center py-6 text-gray-400">
+© 2026 Harshita | Portfolio
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
